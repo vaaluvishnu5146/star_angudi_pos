@@ -1,0 +1,23 @@
+@import "../../Assets/variables.scss";
+
+.sidebar-component {
+  width: 80px;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+  .journeys-area {
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  }
+}

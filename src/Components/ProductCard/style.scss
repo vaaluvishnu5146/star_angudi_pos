@@ -1,0 +1,63 @@
+@import "../../Assets/variables";
+@import "../../Assets/mixins.scss";
+
+.content-card {
+  max-height: 220px;
+  background-color: $base-white-color;
+  border: 2px solid #e7e7e7;
+  padding: 0.5rem;
+  border-radius: $border-radius-card;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 120px;
+    border-radius: $border-radius-card;
+  }
+
+  .card-header {
+    position: relative;
+    .card-header-overlay {
+      padding: 10px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .card-body {
+  }
+}
+
+.content-card:hover {
+  box-shadow: $box-shadow;
+}
+
+.cart-card {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #efefef;
+  margin-bottom: 10px;
+
+  .cart-card-body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .content-start {
+      width: 20%;
+      margin: 0 10px 0 0;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .content-end {
+      width: 80%;
+    }
+  }
+}

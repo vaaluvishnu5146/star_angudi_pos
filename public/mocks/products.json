@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "productName": "Chicken Biriyani",
+      "productDescription": "Product Description",
+      "productCategory": "food",
+      "productSubCategory": "biriyani",
+      "productType": "veg",
+      "productActualPrice": "120",
+      "productOfferPrice": "100",
+      "productOffer": "25% Off",
+      "productImage": ""
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+@import "../../Assets/mixins";
+@import "../../Assets/variables";
+
+.scrollable-list-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  column-gap: 20px;
+  cursor: pointer;
+
+  .category-card {
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    @include flex(flex, center, center, column);
+
+    img {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+  }
+}

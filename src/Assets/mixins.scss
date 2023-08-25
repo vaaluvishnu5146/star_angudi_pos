@@ -1,0 +1,26 @@
+@mixin flex(
+  $display,
+  $align: 'start',
+  $justify: 'space-around',
+  $direction: 'row'
+) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin paddingAll($val) {
+  padding: $val;
+}
+
+@mixin boxsizing($sizing) {
+  box-sizing: $sizing;
+}
+
+@mixin margin($top, $botton, $right, $left) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-right: $right;
+  margin-left: $left;
+}

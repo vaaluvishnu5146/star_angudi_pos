@@ -1,0 +1,22 @@
+@import '../../Assets/variables';
+
+.search-input-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: $base-white-color;
+  border-radius: 5px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-inline-start: 15px;
+  }
+}
+
+.search-input-container:hover {
+  box-shadow: $box-shadow;
+}
