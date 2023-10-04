@@ -6,6 +6,9 @@ import {
   BiTrophy,
   BiBriefcaseAlt2,
   BiCog,
+  BiTable,
+  BiPrinter,
+  BiDotsVerticalRounded,
 } from "react-icons/bi";
 
 const ICONS = {
@@ -16,6 +19,9 @@ const ICONS = {
   TROPHY: BiTrophy,
   BREIFCASE: BiBriefcaseAlt2,
   SETTINGS: BiCog,
+  TABLE: BiTable,
+  PRINTER: BiPrinter,
+  MENU: BiDotsVerticalRounded,
 };
 
 export default ICONS;

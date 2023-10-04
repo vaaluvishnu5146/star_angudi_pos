@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.scss";
-import { Box } from "@mui/material";
 import ICONS from "../../Assets/icons";
+import { Link, NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <Box className="sidebar-component">
-      <Box className="branding">
+    <div className="sidebar-component">
+      <div className="branding">
         <img
           style={{
             width: "100%",
@@ -14,26 +14,68 @@ function Sidebar() {
           src="favicon.png"
           alt="logo"
         />
-      </Box>
-      <Box className="clearfix-50"></Box>
-      <Box className="journeys-area">
-        <Box className="link">
+      </div>
+      <div className="clearfix-50"></div>
+      <div className="journeys-area">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : "link"
+          }
+          to="/"
+        >
           <ICONS.HOME />
-        </Box>
-        <Box className="link">
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+          to="/table"
+        >
+          <ICONS.TABLE />
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+          to="/orders"
+        >
+          <ICONS.PRINTER />
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+          to="/bookings"
+        >
           <ICONS.TIMING />
-        </Box>
-        <Box className="link">
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "link pending" : isActive ? "link active" : "link"
+          }
+          to="/catalogue"
+        >
           <ICONS.BREIFCASE />
-        </Box>
-        <Box className="link">
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "link active" : "link"
+          }
+          to="/offers"
+        >
           <ICONS.TROPHY />
-        </Box>
-        <Box className="link">
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "link pending" : isActive ? "link active" : "link"
+          }
+          to="/settings"
+        >
           <ICONS.SETTINGS />
-        </Box>
-      </Box>
-    </Box>
+        </NavLink>
+      </div>
+      <div className="sidebar-slider"></div>
+    </div>
   );
 }
 

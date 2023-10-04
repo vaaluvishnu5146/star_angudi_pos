@@ -1,4 +1,3 @@
-import React from "react";
 import StepperCta from "../Stepper/StepperCta";
 
 function CartCard() {

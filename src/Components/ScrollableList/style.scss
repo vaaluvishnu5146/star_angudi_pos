@@ -9,8 +9,9 @@
   cursor: pointer;
 
   .category-card {
-    width: 100px;
+    width: auto;
     height: 50px;
+    padding: 0 10px;
     border-radius: 5px;
     @include flex(flex, center, center, column);
 

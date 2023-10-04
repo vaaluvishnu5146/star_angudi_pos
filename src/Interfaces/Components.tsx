@@ -1,16 +1,8 @@
-interface Chips {
-  color:
-    | "primary"
-    | "default"
-    | "secondary"
-    | "error"
-    | "info"
-    | "success"
-    | "warning"
-    | undefined;
-  label: string;
-  variant: string;
-  size: "small" | "medium" | undefined;
+interface Category {
+  name: string;
+  description: string;
+  image: string;
+  isActive: boolean;
 }
 
-export type ChipProps = Chips;
+export type CategoryT = Category;

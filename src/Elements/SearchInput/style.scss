@@ -1,4 +1,4 @@
-@import '../../Assets/variables';
+@import "../../Assets/variables";
 
 .search-input-container {
   position: relative;
@@ -6,6 +6,8 @@
   height: 50px;
   background-color: $base-white-color;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
 
   input {
     width: 100%;
@@ -14,6 +16,13 @@
     border: none;
     background: transparent;
     padding-inline-start: 15px;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    height: 80%;
+    font-weight: bold;
   }
 }
 

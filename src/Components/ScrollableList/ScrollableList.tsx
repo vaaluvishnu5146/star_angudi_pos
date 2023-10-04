@@ -1,8 +1,5 @@
-import * as React from "react";
-import { useTheme } from "@mui/material/styles";
+import { SetStateAction } from "react";
 import "./style.scss";
-import { Box } from "@mui/material";
-
 export interface OptionT {
   id: number;
   label: string;
@@ -12,27 +9,28 @@ export interface OptionT {
 type AppProps = {
   data: OptionT[];
   selected: Number;
+  handleChange: (id: SetStateAction<number>) => void;
 };
 
-export default function ScrollableList({ data, selected = 0 }: AppProps) {
-  const { palette } = useTheme();
+export default function ScrollableList({
+  data,
+  selected = 0,
+  handleChange,
+}: AppProps) {
   return (
     <div className="scrollable-list-container">
       {data.map((d, i) => (
-        <Box
-          className={"category-card"}
+        <div
+          className={`category-card ${
+            selected === d.id ? "bg-success text-white" : "bg-success-subtle"
+          }`}
           key={i}
-          sx={{
-            background:
-              selected === d.id ? palette.primary.main : palette.common.white,
-            color:
-              selected === d.id ? palette.common.white : palette.primary.main,
-          }}
+          onClick={() => handleChange(d.id)}
         >
           <p className="fw-bold" id="">
             {d.label}
           </p>
-        </Box>
+        </div>
       ))}
     </div>
   );
